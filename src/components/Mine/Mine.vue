@@ -31,7 +31,7 @@ export default {
     reqNewMusic((err, data) => {
       if (!err) {
         console.log(data)
-        this.result = data.result.slice(0, 12)
+        this.result = data.result
         // console.log(this.result)
       } else {
         console.log(err)
@@ -41,7 +41,7 @@ export default {
     reqAlbums((err, data) => {
       if (!err) {
         // console.log(data)
-        this.albums = data.albums.slice(0, 12)
+        // this.albums = data.albums.slice(0, 12)
       } else {
         console.log(err)
       }

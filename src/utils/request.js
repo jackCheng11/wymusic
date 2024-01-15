@@ -1,7 +1,7 @@
 import axios from 'axios'
 // const axios = require('axios')
 let request = axios.create({
-  baseURL: 'https://netease.tiita.cn'
+  baseURL: 'http://localhost:3000'
 })
 
 export function reqBanner (cb, options) {

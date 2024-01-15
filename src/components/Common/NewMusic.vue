@@ -41,11 +41,8 @@ export default {
     hook1 (id) {
       this.showPlaylistDetail = true
       reqPlaylistDetail((err, data) => {
-        // console.log(id)
         if (!err) {
-          // console.log(data.playlist)
           this.PlaylistDetail = data.playlist
-          // console.log(data.data.playlist)
         } else {
           console.log(err)
         }
@@ -56,8 +53,8 @@ export default {
         }
       })
     },
-    hook3 (data) {
-      this.showPlaylistDetail = data
+    hook3 () {
+      this.showPlaylistDetail = false
     }
   }
 }

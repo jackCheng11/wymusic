@@ -24,6 +24,9 @@ const store = new Vuex.Store({
   },
   actions: {
     getMusicURL (context, payload) {
+      Vue.nextTick(function () {
+        context.commit('setPlayStatus', 'stop')
+      })
       reqSongUrl((err, data) => {
         if (!err) {
           context.commit('setMusicURL', data.data[0].url)

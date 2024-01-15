@@ -1,7 +1,7 @@
 <template>
   <div id="playlist-detail">
     <div id="music-topbar">
-        <button @click="hook2()">取消</button>
+        <button @click="hook2">取消</button>
         <div id="music-left">
             <img :src="PlaylistDetail.coverImgUrl" alt="">
         </div>
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     hook2 () {
-      this.flag = false
+      // this.flag = false
       this.$emit('changeFlag', this.flag)
     },
     // ...mapActions([
@@ -49,7 +49,6 @@ export default {
         if (!err) {
           console.log(data)
           this.sgc = data.lrc.lyric
-          // console.log(data.lrc.lyric)
         } else {
           console.log(err)
         }

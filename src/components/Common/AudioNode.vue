@@ -18,7 +18,7 @@ export default {
   watch: {
     playStatus () {
       this.$nextTick(() => {
-        document.querySelector('audio')[this.playStatus]()
+        document.querySelector('audio')[this.playStatus] && document.querySelector('audio')[this.playStatus]()
       })
     }
   }
